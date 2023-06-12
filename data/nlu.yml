@@ -16,6 +16,13 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - howdy
+    - hihi  
+    - sup
+    - what's up
+    - hello buddy
+    - wazzup
+    - yo
 
 - intent: goodbye
   examples: |
@@ -29,6 +36,11 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - talk to you later
+    - cya
+    - ciao
+    - bye for now
+
 
 - intent: affirm
   examples: |
@@ -38,6 +50,14 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yep
+    - yeah
+    - that's right
+    - ok
+    - great
+    - perfect
+    - sounds good
+    - sounds great
 
 - intent: deny
   examples: |
@@ -48,40 +68,11 @@ nlu:
     - don't like that
     - no way
     - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - nope
+    - not true
+    - no thanks
+    - nah
+    - never
 
 - intent: bot_challenge
   examples: |
@@ -89,3 +80,12 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - are you a robot?
+    - am I talking to an actual person?
+    - you're a bot aren't you?
+    - are you even a real person?
+    - you're not a real person right?
+    - I think you're a bot
+    - you're a bot
+    - are you a bot or a human?
+
