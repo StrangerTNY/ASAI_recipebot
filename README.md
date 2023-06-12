@@ -1,5 +1,6 @@
 # Setup guide
-1. To get started, you'll need to make sure that C++ is installed. Next, you'll want to have anaconda. You can download this from [here](https://www.anaconda.com/download#windows)
+### 1. 
+To get started, you'll need to make sure that C++ is installed. Next, you'll want to have anaconda. You can download this from [here](https://www.anaconda.com/download#windows)
 
 2. Open VS Code
 3. Use CTRL + SHIFT + P to open the settings
