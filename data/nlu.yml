@@ -74,6 +74,44 @@ nlu:
     - nah
     - never
 
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+    - thanks bot
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for that
+    - cheers mate
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - thx
+
+- intent: ask_recipe
+  example: |
+    - I want to make a recipe
+    - I want to cook something
+    - I want to make something
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I make?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with that?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with that?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with those?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with those?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with these?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with these?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with this?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with this?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with it?
+    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with it?
+
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
