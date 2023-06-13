@@ -94,7 +94,7 @@ nlu:
     - thx
 
 - intent: ask_recipe
-  example: |
+  examples: |
     - I want to make a recipe
     - I want to cook something
     - I want to make something
@@ -126,4 +126,10 @@ nlu:
     - I think you're a bot
     - you're a bot
     - are you a bot or a human?
+
+- intent: ask_for_recipe
+  examples: |
+    - give me the Warm Comfort recipe
+    - can you give me the Warm comfort recipe
+    - i need the Warm Comfort recipe
 

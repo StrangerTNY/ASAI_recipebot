@@ -2,23 +2,29 @@ version: "3.1"
 
 stories:
 
-- story: recipe path
+#- story: recipe path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: ask_recipe
+#  - action: utter_got_recipe
+#  - intent: goodbye
+#  - action: utter_goodbye
+
+#- story: no recipe path
+#  steps: 
+#  - intent: greet
+#  - action: utter_greet
+# - intent: ask_recipe
+#  - action: utter_no_recipe
+#  - intent: goodbye
+#  - action: utter_goodbye
+
+- story: dummy recipe find
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_recipe
-  - action: utter_got_recipe
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: no recipe path
-  steps: 
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_recipe
-  - action: utter_no_recipe
-  - intent: goodbye
-  - action: utter_goodbye
-
+  - intent: ask_for_recipe
+  - action: action_give_recipe
 
 
