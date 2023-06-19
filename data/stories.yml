@@ -1,30 +1,27 @@
 version: "3.1"
 
+# This file contains the stories which represent path of conversation for your assistant.
 stories:
 
-#- story: recipe path
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: ask_recipe
-#  - action: utter_got_recipe
-#  - intent: goodbye
-#  - action: utter_goodbye
-
-#- story: no recipe path
-#  steps: 
-#  - intent: greet
-#  - action: utter_greet
-# - intent: ask_recipe
-#  - action: utter_no_recipe
-#  - intent: goodbye
-#  - action: utter_goodbye
-
-- story: dummy recipe find
+# story if user wants to interrupt form
+- story: User doesn't want to continue form
   steps:
   - intent: greet
   - action: utter_greet
   - intent: ask_for_recipe
-  - action: action_give_recipe
-
+  - action: recipe_form
+  - active_loop: recipe_form
+  - intent: stop_form
+  - action: utter_ask_continue
+  - or:
+    - intent: stop_form
+    - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye
+    
+  
 

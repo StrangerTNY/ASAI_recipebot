@@ -1,37 +1,81 @@
-version: "3.1"
+version: '3.1'
 
+# contains all the intents, entities, slots, responses, forms, and actions your assistant should know about
+
+#Intents are the things users can express to your assistant. They represent the intention behind the user input.
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - thanks
-  - bot_challenge
-  - ask_recipe
-  - ask_for_recipe
+- affirm
+- ask_for_recipe
+- bot_challenge
+- deny
+- goodbye
+- greet
+- inform
+- request_recipe_form
+- stop_form
+- thanks
 
+#Actions are the things your bot can do in response to a user message or an external event.
 actions:
-  - action_give_recipe
+- utter_submit
+- utter_goodbye
+- utter_greet
+- validate_recipe_form
+- utter_ask_continue
+- utter_iamabot
+- utter_ask_ingredient
+- utter_ask_recipe_number
 
+#Entities are structured pieces of information that can be extracted from a user's message.
+entities:
+- ingredient
+- recipe_number
+
+#Slots are a way to keep track of information that the user provided.
+slots:
+  ingredient:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ingredient
+      conditions:
+      - active_loop: recipe_form
+        requested_slot: ingredient
+  recipe_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: recipe_number
+      conditions:
+      - active_loop: recipe_form
+        requested_slot: recipe_number
+
+#A form is a specific kind of custom action that contains the logic to loop over a set of required slots and ask the user for this information.
+forms:
+  recipe_form:
+    required_slots:
+    - ingredient
+    - recipe_number
+
+#Responses are messages your assistant will send back to the user.
 responses:
   utter_greet:
-  - text: "Hey, this is your Recipe Assistant! How can i help you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Hey, this is your Recipe Assistant! How can i help you?
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
+  utter_ask_ingredient:
+  - text: What ingredient do you want to use?
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: I am a bot, powered by Rasa.
+  utter_ask_continue:
+  - text: Are you sure?
+  utter_ask_recipe_number:
+  - text: Which recipe do you want to use?
+  utter_submit:
+  - text: Have fun cooking!
+
 
 session_config:
   session_expiration_time: 60

@@ -1,0 +1,6 @@
+[
+  {
+    "name": "ingredient",
+    "pattern": "(\\bingredients\\.csv\\b)"
+  }
+]

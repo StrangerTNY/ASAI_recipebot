@@ -1,5 +1,6 @@
 version: "3.1"
 
+# NLU training data
 nlu:
 - intent: greet
   examples: |
@@ -17,13 +18,12 @@ nlu:
     - goodevening
     - good afternoon
     - howdy
-    - hihi  
+    - hihi
     - sup
     - what's up
     - hello buddy
     - wazzup
     - yo
-
 - intent: goodbye
   examples: |
     - cu
@@ -40,8 +40,7 @@ nlu:
     - cya
     - ciao
     - bye for now
-
-
+    - Thank you, bye!
 - intent: affirm
   examples: |
     - yes
@@ -58,7 +57,6 @@ nlu:
     - perfect
     - sounds good
     - sounds great
-
 - intent: deny
   examples: |
     - no
@@ -72,8 +70,18 @@ nlu:
     - not true
     - no thanks
     - nah
-    - never
-
+- intent: stop_form
+  examples: |
+    - stop
+    - cancel
+    - abort
+    - nevermind
+    - I don't want to continue
+    - I don't want to cook anymore
+    - I don't want to cook
+    - I would rather order food
+    - I would rather order
+    - nah screw it
 - intent: thanks
   examples: |
     - thanks
@@ -92,44 +100,63 @@ nlu:
     - cool, thanks
     - cool thank you
     - thx
-
-- intent: ask_recipe
+- intent: ask_for_recipe
   examples: |
-    - I want to make a recipe
+    - Can you give me a recipe?
+    - I want a recipe
     - I want to cook something
-    - I want to make something
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I make?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with that?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with that?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with those?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with those?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with these?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with these?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with this?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with this?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I make with it?
-    - I have [chicken](ingredient) and [tomato](ingredient) what can I cook with it?
-
-
+    - recipe?
+    - hungry
+    - what can I cook?
+    - I want to cook
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-    - are you a robot?
-    - am I talking to an actual person?
-    - you're a bot aren't you?
-    - are you even a real person?
-    - you're not a real person right?
+    - are you a real person?
+    - you're a bot, aren't you?
+    - are you a bot or human?
     - I think you're a bot
-    - you're a bot
-    - are you a bot or a human?
-
-- intent: ask_for_recipe
+    - I think I'm talking to a bot
+    - are you a bot or a persh
+    - are you a real bot?
+    - are you a bot or a human being?
+    - you are a robot?
+    - you are a bot?
+- intent: inform
   examples: |
-    - give me the Warm Comfort recipe
-    - can you give me the Warm comfort recipe
-    - i need the Warm Comfort recipe
+    - [chicken](ingredient)
+    - [chicken breast](ingredient)
+    - [miso](ingredient)
+    - I want to use [potatoe](ingredient)
+    - I want to cook recipe number [1](recipe_number)
+    - [3](recipe_number)
+    - [2](recipe_number) sounds good
+    - [6600](recipe_number)
+    - [spinach](ingredient)
+    - [16](recipe_number)
+    - [tomaotes](ingredient)
+    - [tomato](ingredient)
+    - [potato](ingredient)
+    - [potatoes](ingredient)
+    - [pasta](ingredient)
+    - [spaghetti](ingredient)
+    - [noodle](ingredient)
+    - [cheese](ingredient)
+    - [milk](ingredient)
+    - [beef](ingredient)
+    - [pork](ingredient)
+    - [garlic](ingredient)
+    - [onion](ingredient)
+    - [carrot](ingredient)
+    - [broccoli](ingredient)
+    - [cauliflower](ingredient)
+    - [cabbage](ingredient)
+- lookup: ingredient
+  examples: |
+    - ingredient.txt
+
+
 

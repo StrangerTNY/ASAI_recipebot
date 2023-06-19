@@ -4,48 +4,65 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
-
-from rasa_sdk import Action, Tracker
+import numpy as np 
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import EventType
+from rasa_sdk.types import DomainDict
 import csv
 
-class ActionHelloWorld(Action):
-
+# custom action to validate the recipe form
+class ValidateRecipeForm(FormValidationAction):
+    # name of the action to be declared in domain.yml
     def name(self) -> Text:
-        return "action_give_recipe"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        #dispatcher.utter_message(text="Hello World!")
-        
-        # get the location slot
-#        location = tracker.get_slot('location')
-
-        # read the CSV file
-        with open('Recipes.csv','r') as file:
-            reader = csv.DictReader(file)
-            # get a list of universities in the desired location
-            #output = [row for row in reader if row['Location'] == location]
+        return "validate_recipe_form"
+    
+    # validate the ingredient slot
+    def validate_ingredient(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        domain: DomainDict,
+        tracker: Tracker,
+    ) -> Dict[Text, Any]:
+        with open('Recipes.csv', newline='', encoding="utf8") as csvfile:	
+            reader = csv.DictReader(csvfile)
+            recipes = []
             for row in reader:
-                if row['Title'] == 'Warm Comfort':
-                    dispatcher.utter_message("I looked up the Warm Comfort Recipe for you! Here is it:")
-                    return 
-            
-            dispatcher.utter_message("Im sorry, i do not know any meal with that name.")
-            return
-        if output: # there is at least one value
-            # build your reply according to the output
-            reply  = f"This is a list of universities in {location}:"
-            reply += "\n- " + "\n- ".join([item['Name'] for item in output])
-            # utter the message
-            dispatcher.utter_message(reply)
+                if slot_value.lower() in row['Ingredients']:
+                    recipes.append(row['Number'] + " " +row['Title'])
+            if len(recipes) == 0:
+                dispatcher.utter_message(text="Sorry, I couldn't find any recipes with that ingredient.")
+                return {"ingredient": None}
+            elif len(recipes) > 5:
+                dispatcher.utter_message(text="Here are a few recipes with that ingredient:\n" + '\n'.join(np.random.choice(recipes, 5, replace=False)))
+            else:
+                dispatcher.utter_message(text="Here are all recipes with that ingredient:\n" + '\n'.join(recipes))
+        return {"ingredient": slot_value}
+    
+    # validate the recipe number slot
+    def validate_recipe_number(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        domain: DomainDict,
+        tracker: Tracker,
+    ) -> Dict[Text, Any]:
+        with open('Recipes.csv', newline='', encoding="utf8") as csvfile:	
+            reader = csv.DictReader(csvfile)
+            recipe_name = []
+            recipe_ingredients = []
+            recipe_instructions = []
+            for row in reader:
+                if slot_value == row['Number']:
+                    recipe_name.append(row['Title'])
+                    recipe_ingredients.append(row['Ingredients'])
+                    recipe_instructions.append(row['Instructions'])
+            if len(recipe_name) == 0:
+                dispatcher.utter_message(text="Sorry, I couldn't find that recipe.")
+                return {"recipe_number": None}
+            else:
+                dispatcher.utter_message(text="Here are the instructions and ingredients for " + recipe_name[0] + ":\n\n " + recipe_ingredients[0]  + "\n\n" + recipe_instructions[0] )
+        return {"recipe_number": slot_value}
 
-        else: # the list is empty
-            dispatcher.utter_message(f"I could not find universities in {location}")
-        return []

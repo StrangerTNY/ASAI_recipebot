@@ -1,13 +1,40 @@
 version: "3.1"
-
+# This file contains the rules which define how to react on certain messages.
 rules:
+
+- rule: Say hello anytime the user says hello, hey or hi
+  steps:
+  - intent: greet
+  - action: utter_greet
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Interruption in Recipe Form
+  condition:
+  - active_loop: recipe_form
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+  - action: recipe_form
+  - active_loop: recipe_form
+
+# rule to activate form
+- rule: Activate Recipe Form
+  steps:
+  - intent: ask_for_recipe
+  - action: recipe_form
+  - active_loop: recipe_form
+
+# rule to end form once all slots are filled
+- rule: Submit Recipe Form
+  condition:
+  - active_loop: recipe_form
+  steps:
+  - action: recipe_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ingredient",
+    "pattern": "(\\bingredients\\.csv\\b)"
+  },
+  {
+    "name": "recipe_name",
+    "pattern": "(\\brecipe_name\\.csv\\b)"
+  }
+]
