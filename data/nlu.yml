@@ -1,6 +1,4 @@
 version: "3.1"
-
-# NLU training data
 nlu:
 - intent: greet
   examples: |
@@ -24,6 +22,7 @@ nlu:
     - hello buddy
     - wazzup
     - yo
+    - Hello there
 - intent: goodbye
   examples: |
     - cu
@@ -41,6 +40,7 @@ nlu:
     - ciao
     - bye for now
     - Thank you, bye!
+    - Thank you, bye
 - intent: affirm
   examples: |
     - yes
@@ -154,9 +154,8 @@ nlu:
     - [broccoli](ingredient)
     - [cauliflower](ingredient)
     - [cabbage](ingredient)
+    - I want to use [Miso]{"entity": "ingredient", "value": "miso"}
+    - [5590](recipe_number)
 - lookup: ingredient
   examples: |
     - ingredient.txt
-
-
-

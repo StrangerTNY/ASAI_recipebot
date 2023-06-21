@@ -25,3 +25,37 @@ stories:
     
   
 
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_recipe
+  - action: recipe_form
+  - active_loop: recipe_form
+  - slot_was_set:
+    - requested_slot: ingredient
+  - intent: inform
+    entities:
+    - ingredient: miso
+  - slot_was_set:
+    - ingredient: miso
+  - action: recipe_form
+  - slot_was_set:
+    - ingredient: miso
+  - slot_was_set:
+    - requested_slot: recipe_number
+  - intent: inform
+    entities:
+    - recipe_number: '5590'
+  - slot_was_set:
+    - recipe_number: '5590'
+  - action: recipe_form
+  - slot_was_set:
+    - recipe_number: '5590'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - intent: goodbye
+  - action: utter_goodbye

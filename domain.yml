@@ -1,8 +1,4 @@
 version: '3.1'
-
-# contains all the intents, entities, slots, responses, forms, and actions your assistant should know about
-
-#Intents are the things users can express to your assistant. They represent the intention behind the user input.
 intents:
 - affirm
 - ask_for_recipe
@@ -14,8 +10,6 @@ intents:
 - request_recipe_form
 - stop_form
 - thanks
-
-#Actions are the things your bot can do in response to a user message or an external event.
 actions:
 - utter_submit
 - utter_goodbye
@@ -25,13 +19,9 @@ actions:
 - utter_iamabot
 - utter_ask_ingredient
 - utter_ask_recipe_number
-
-#Entities are structured pieces of information that can be extracted from a user's message.
 entities:
-- ingredient
 - recipe_number
-
-#Slots are a way to keep track of information that the user provided.
+- ingredient
 slots:
   ingredient:
     type: text
@@ -51,15 +41,11 @@ slots:
       conditions:
       - active_loop: recipe_form
         requested_slot: recipe_number
-
-#A form is a specific kind of custom action that contains the logic to loop over a set of required slots and ask the user for this information.
 forms:
   recipe_form:
     required_slots:
     - ingredient
     - recipe_number
-
-#Responses are messages your assistant will send back to the user.
 responses:
   utter_greet:
   - text: Hey, this is your Recipe Assistant! How can i help you?
@@ -75,8 +61,6 @@ responses:
   - text: Which recipe do you want to use?
   utter_submit:
   - text: Have fun cooking!
-
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
