@@ -1,4 +1,5 @@
 version: "3.1"
+
 nlu:
 - intent: greet
   examples: |
@@ -23,6 +24,8 @@ nlu:
     - wazzup
     - yo
     - Hello there
+    - hi, how are you?
+
 - intent: goodbye
   examples: |
     - cu
@@ -39,8 +42,12 @@ nlu:
     - cya
     - ciao
     - bye for now
-    - Thank you, bye!
-    - Thank you, bye
+    - Thank You, bye!
+    - Thank You, bye
+    - farewell
+    - until next time
+    - take care
+
 - intent: affirm
   examples: |
     - yes
@@ -57,6 +64,11 @@ nlu:
     - perfect
     - sounds good
     - sounds great
+    - absolutely
+    - definitely
+    - sure thing
+    - absolutely right
+
 - intent: deny
   examples: |
     - no
@@ -70,6 +82,11 @@ nlu:
     - not true
     - no thanks
     - nah
+    - I disagree
+    - I beg to differ
+    - I'm not convinced
+    - I'm not so sure
+
 - intent: stop_form
   examples: |
     - stop
@@ -82,6 +99,13 @@ nlu:
     - I would rather order food
     - I would rather order
     - nah screw it
+    - enough cooking for now
+    - cancel the process
+    - stop the operation
+    - abandon
+    - cease
+    - halt
+
 - intent: thanks
   examples: |
     - thanks
@@ -100,6 +124,9 @@ nlu:
     - cool, thanks
     - cool thank you
     - thx
+    - many thanks
+    - thanks a million
+
 - intent: ask_for_recipe
   examples: |
     - Can you give me a recipe?
@@ -109,6 +136,15 @@ nlu:
     - hungry
     - what can I cook?
     - I want to cook
+    - suggest a recipe
+    - recommend a dish
+    - any cooking ideas?
+    - give me a cooking suggestion
+    - I'm in the mood for cooking
+    - inspire me with a recipe
+    - any good recipes?
+    - looking for cooking inspiration
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -120,11 +156,13 @@ nlu:
     - are you a bot or human?
     - I think you're a bot
     - I think I'm talking to a bot
-    - are you a bot or a persh
+    - are you a bot or a person?
     - are you a real bot?
     - are you a bot or a human being?
     - you are a robot?
     - you are a bot?
+    - prove you're not a bot
+
 - intent: inform
   examples: |
     - [chicken](ingredient)
@@ -156,6 +194,509 @@ nlu:
     - [cabbage](ingredient)
     - I want to use [Miso]{"entity": "ingredient", "value": "miso"}
     - [5590](recipe_number)
+    - can I use [salmon](ingredient)?
+    - include [avocado](ingredient) in the recipe
+    - add [shrimp](ingredient) to the list
+
 - lookup: ingredient
   examples: |
     - ingredient.txt
+    - ingredients list
+    - check ingredient file
+    - what's in the ingredients file?
+    - list of ingredients
+    - show me the ingredients
+    - ingredients lookup
+    - view the ingredients
+    - display ingredient list
+    - Red chili flakes
+    - Black peppercorns
+    - Coriander
+    - Fennel seeds
+    - Paprika
+    - Oregano
+    - Turmeric
+    - Whole nutmeg
+    - Bay leaves
+    - Cayenne pepper
+    - Thyme
+    - Cinnamon
+    - Salt
+    - Panko bread crumbs
+    - Pasta
+    - Couscous
+    - Rice
+    - All-purpose flour
+    - White sugar
+    - Brown sugar
+    - Powdered sugar
+    - Baking powder
+    - Active dry yeast
+    - Chicken stock
+    - Beef stock
+    - Butter
+    - Heavy cream
+    - Eggs
+    - Parmesan
+    - Bacon
+    - Parsley
+    - Celery
+    - Carrots
+    - Lemons
+    - Limes
+    - Orange juice
+    - Ketchup
+    - Mayonnaise
+    - Extra virgin olive oil
+    - Vegetable oil
+    - Canola/olive oil
+    - Vinegar
+    - Mustard
+    - Honey
+    - Garlic
+    - Shallots
+    - Potatoes
+    - Onions
+    - Tomatoes
+    - Beans
+    - Black Pepper
+    - Cumin
+    - Coriander
+    - Bay Leaves
+    - Paprika
+    - Cayenne
+    - Fennel
+    - Turmeric
+    - Cinnamon
+    - Nutmeg
+    - Cane Sugar
+    - Brown Sugar
+    - Powdered Sugar
+    - Flour
+    - Instant Yeast
+    - Baking Powder
+    - Baking Soda
+    - Soy Sauce
+    - Miso
+    - Ketchup
+    - Celery
+    - Mushrooms
+    - Limes
+    - Ginger
+    - Fresh Chiles
+    - Lemons
+    - Salt
+    - Pepper
+    - Olive oil
+    - Vegetable oil
+    - All-purpose flour
+    - Granulated sugar
+    - Chicken
+    - Beef 
+    - Tuna
+    - Salmon
+    - Shrimp
+    - Avocado
+    - Cheddar cheese
+    - Mozzarella cheese
+    - Blue cheese
+    - Gouda cheese
+    - Feta cheese
+    - Ricotta cheese
+    - Parmigiano-Reggiano
+    - Gruyere cheese
+    - Swiss cheese
+    - Provolone cheese
+    - Goat cheese
+    - Cream cheese
+    - Sour cream
+    - Greek yogurt
+    - Almonds
+    - Walnuts
+    - Pecans
+    - Cashews
+    - Pistachios
+    - Hazelnuts
+    - Sunflower seeds
+    - Pumpkin seeds
+    - Chia seeds
+    - Flax seeds
+    - Sesame seeds
+    - Quinoa
+    - Lentils
+    - Chickpeas
+    - Black beans
+    - Kidney beans
+    - Cannellini beans
+    - Green beans
+    - Spinach
+    - Kale
+    - Arugula
+    - Romaine lettuce
+    - Iceberg lettuce
+    - Mixed greens
+    - Cabbage
+    - Brussels sprouts
+    - Asparagus
+    - Broccoli
+    - Cauliflower
+    - Zucchini
+    - Bell peppers
+    - Jalapeno peppers
+    - Anaheim peppers
+    - Poblano peppers
+    - Eggplant
+    - Radishes
+    - Beets
+    - Carrot
+    - Butternut squash
+    - Sweet potato
+    - Pumpkin
+    - Cucumber
+    - Cherry tomatoes
+    - Grape tomatoes
+    - Plum tomatoes
+    - Beefsteak tomatoes
+    - Roma tomatoes
+    - Red onion
+    - White onion
+    - Yellow onion
+    - Scallions
+    - Leeks
+    - Shallots
+    - Red wine
+    - White wine
+    - Beer
+    - Rum
+    - Vodka
+    - Whiskey
+    - Tequila
+    - Brandy
+    - Champagne
+    - Vermouth
+    - Triple sec
+    - Grand Marnier
+    - Cointreau
+    - Campari
+    - Aperol
+    - Bourbon
+    - Gin
+    - Martini
+    - Margarita
+    - Mojito
+    - Old Fashioned
+    - Negroni
+    - Manhattan
+    - Moscow Mule
+    - Mojito
+    - Pina Colada
+    - Daiquiri
+    - Mai Tai
+    - Cosmopolitan
+    - Bloody Mary
+    - Mimosa
+    - Bellini
+    - Martini
+    - Mojito
+    - Pinot Noir
+    - Cabernet Sauvignon
+    - Merlot
+    - Shiraz
+    - Chardonnay
+    - Sauvignon Blanc
+    - Pinot Grigio
+    - Riesling
+    - Malbec
+    - Zinfandel
+    - Syrah
+    - Rose wine
+    - Prosecco
+    - Champagne
+    - Sparkling wine
+    - Sake
+    - Soju
+    - Shochu
+    - Baijiu
+    - Red Bull
+    - Orange juice
+    - Apple juice
+    - Pineapple juice
+    - Cranberry juice
+    - Coconut water
+    - Iced tea
+    - Lemonade
+    - Ginger beer
+    - Tonic water
+    - Club soda
+    - Cola
+    - Sprite
+    - Root beer
+    - Dr. Pepper
+    - Mountain Dew
+    - Pepsi
+    - Coca-Cola
+    - 7 Up
+    - Ginger ale
+    - Coffee
+    - Espresso
+    - Americano
+    - Latte
+    - Cappuccino
+    - Macchiato
+    - Mocha
+    - Cold brew
+    - Tea
+    - Green tea
+    - Black tea
+    - Chamomile tea
+    - Earl Grey tea
+    - Matcha tea
+    - Oolong tea
+    - White tea
+    - Chai tea
+    - Herbal tea
+    - Bubble tea
+    - Red wine vinegar
+    - Balsamic vinegar
+    - Apple cider vinegar
+    - White vinegar
+    - Rice vinegar
+    - Malt vinegar
+    - Olive oil
+    - Avocado oil
+    - Walnut oil
+    - Sesame oil
+    - Truffle oil
+    - Peanut oil
+    - Coconut oil
+    - Ghee
+    - Clarified butter
+    - Sunflower oil
+    - Grapeseed oil
+    - Corn oil
+    - Canola oil
+    - Almond oil
+    - Flaxseed oil
+    - Hazelnut oil
+    - Pistachio oil
+    - Pomegranate molasses
+    - Agave nectar
+    - Maple syrup
+    - Honey
+    - Molasses
+    - Corn syrup
+    - Karo syrup
+    - Golden syrup
+    - Chocolate syrup
+    - Caramel sauce
+    - Butterscotch sauce
+    - Strawberry jam
+    - Raspberry jam
+    - Blackberry jam
+    - Apricot jam
+    - Orange marmalade
+    - Grape jelly
+    - Peanut butter
+    - Almond butter
+    - Cashew butter
+    - Sunflower butter
+    - Hazelnut spread
+    - Nutella
+    - Marshmallows
+    - Chocolate chips
+    - White chocolate
+    - Dark chocolate
+    - Milk chocolate
+    - Semi-sweet chocolate
+    - Bittersweet chocolate
+    - Cocoa powder
+    - Sprinkles
+    - Nuts
+    - Almonds
+    - Walnuts
+    - Pecans
+    - Cashews
+    - Pistachios
+    - Hazelnuts
+    - Sunflower seeds
+    - Pumpkin seeds
+    - Chia seeds
+    - Flax seeds
+    - Sesame seeds
+    - Poppy seeds
+    - Quinoa
+    - Lentils
+    - Chickpeas
+    - Black beans
+    - Kidney beans
+    - Cannellini beans
+    - Green beans
+    - Lima beans
+    - Edamame
+    - Black-eyed peas
+    - Soybeans
+    - Tofu
+    - Tempeh
+    - Seitan
+    - Jackfruit
+    - Mock duck
+    - Textured vegetable protein (TVP)
+    - Falafel
+    - Hummus
+    - Baba ganoush
+    - Tzatziki
+    - Pita bread
+    - Naan
+    - Tortillas
+    - Baguette
+    - Sourdough bread
+    - Rye bread
+    - Whole wheat bread
+    - Multigrain bread
+    - Gluten-free bread
+    - Ciabatta
+    - Focaccia
+    - English muffins
+    - Croissants
+    - Brioche
+    - Challah
+    - Pretzels
+    - Crackers
+    - Pita chips
+    - Bagels
+    - Rice cakes
+    - Popcorn
+    - Potato chips
+    - Tortilla chips
+    - Pretzels
+    - Cheetos
+    - Doritos
+    - Fritos
+    - Triscuits
+    - Ritz crackers
+    - Saltine crackers
+    - Wheat Thins
+    - Goldfish crackers
+    - Cheese puffs
+    - Pita chips
+    - Hummus
+    - Salsa
+    - Guacamole
+    - Spinach dip
+    - Artichoke dip
+    - Queso
+    - Tzatziki
+    - Baba ganoush
+    - Bruschetta
+    - Caprese salad
+    - Antipasto platter
+    - Stuffed mushrooms
+    - Deviled eggs
+    - Mozzarella sticks
+    - Chicken wings
+    - Sliders
+    - Spring rolls
+    - Dumplings
+    - Shrimp cocktail
+    - Nachos
+    - Charcuterie board
+    - Fruit skewers
+    - Vegetable platter
+    - Cheese board
+    - Fondue
+    - Potato skins
+    - Jalapeno poppers
+    - Onion rings
+    - Crab cakes
+    - Shrimp scampi
+    - Calamari
+    - Clams casino
+    - Escargot
+    - Oysters Rockefeller
+    - Lobster bisque
+    - French onion soup
+    - Tomato bisque
+    - Clam chowder
+    - Gazpacho
+    - Minestrone
+    - Chicken noodle soup
+    - Matzo ball soup
+    - Miso soup
+    - Ramen
+    - Pho
+    - Hot and sour soup
+    - Wonton soup
+    - Tom yum
+    - Caesar salad
+    - Greek salad
+    - Caprese salad
+    - Cobb salad
+    - Waldorf salad
+    - Nicoise salad
+    - Spinach salad
+    - Waldorf salad
+    - Panzanella
+    - Tabbouleh
+    - Quinoa salad
+    - Pasta salad
+    - Potato salad
+    - Coleslaw
+    - Broccoli salad
+    - Waldorf salad
+    - Chicken Caesar salad
+    - Chef salad
+    - Cobb salad
+    - Niçoise salad
+    - Waldorf salad
+    - Greek salad
+    - Caprese salad
+    - Caesar salad
+    - Salad nicoise
+    - Spinach salad
+    - Tuna salad
+    - Chicken salad
+    - Shrimp salad
+    - Egg salad
+    - Potato salad
+    - Macaroni salad
+    - Fruit salad
+    - Waldorf salad
+    - Caesar salad
+    - Greek salad
+    - Cobb salad
+    - Niçoise salad
+    - Caprese salad
+    - Panzanella
+    - Caesar salad
+    - Greek salad
+    - Cobb salad
+    - Niçoise salad
+    - Waldorf salad
+    - Caprese salad
+    - Quinoa salad
+    - Pasta salad
+    - Potato salad
+    - Coleslaw
+    - Broccoli salad
+    - Waldorf salad
+    - Caesar salad
+    - Greek salad
+    - Caprese salad
+    - Cobb salad
+    - Niçoise salad
+    - Waldorf salad
+    - Spinach salad
+    - Panzanella
+    - Tabbouleh
+    - Quinoa salad
+    - Pasta salad
+    - Potato salad
+    - Coleslaw
+    - Broccoli salad
+    - Caesar salad
+    - Greek salad
+    - Caprese salad
+    - Cobb salad
+    - Waldorf salad
+    - Spinach salad
+    - Panzanella

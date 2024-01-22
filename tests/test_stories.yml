@@ -1,6 +1,3 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
 stories:
 - story: path 1
   steps:
@@ -35,28 +32,49 @@ stories:
   - action: recipe_form
   - active_loop: recipe_form
   - slot_was_set:
-    - requested_slot: ingredient
+      - requested_slot: ingredient
   - intent: inform
     entities:
     - ingredient: miso
   - slot_was_set:
-    - ingredient: miso
+      - ingredient: miso
   - action: recipe_form
   - slot_was_set:
-    - ingredient: miso
+      - ingredient: miso
   - slot_was_set:
-    - requested_slot: recipe_number
+      - requested_slot: recipe_number
   - intent: inform
     entities:
     - recipe_number: '5590'
   - slot_was_set:
-    - recipe_number: '5590'
+      - recipe_number: '5590'
   - action: recipe_form
   - slot_was_set:
-    - recipe_number: '5590'
+      - recipe_number: '5590'
   - slot_was_set:
-    - requested_slot: null
+      - requested_slot: null
   - active_loop: null
   - action: utter_submit
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user interrupts form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_recipe
+  - action: recipe_form
+  - active_loop: recipe_form
+  - slot_was_set:
+      - requested_slot: ingredient
+  - intent: stop_form
+  - action: utter_ask_continue
+  - or:
+    - intent: stop_form
+    - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
   - intent: goodbye
   - action: utter_goodbye

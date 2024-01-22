@@ -7,7 +7,6 @@ intents:
 - goodbye
 - greet
 - inform
-- request_recipe_form
 - stop_form
 - thanks
 actions:

@@ -1,0 +1,80 @@
+[
+  {
+    "text": "cease",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "ingredient",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.6230489015579224,
+        "value": "cease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "thanks a million",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "ingredient",
+        "start": 9,
+        "end": 16,
+        "confidence_entity": 0.9890465140342712,
+        "value": "million",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "looking for cooking inspiration",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "ingredient",
+        "start": 20,
+        "end": 31,
+        "confidence_entity": 0.815891683101654,
+        "value": "inspiration",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can I use salmon?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "salmon",
+        "entity": "ingredient"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "include avocado in the recipe",
+    "entities": [
+      {
+        "start": 8,
+        "end": 15,
+        "value": "avocado",
+        "entity": "ingredient"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "add shrimp to the list",
+    "entities": [
+      {
+        "start": 4,
+        "end": 10,
+        "value": "shrimp",
+        "entity": "ingredient"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

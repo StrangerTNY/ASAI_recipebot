@@ -1,0 +1,130 @@
+[
+  {
+    "text": "hi, how are you?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.9211711287498474
+    }
+  },
+  {
+    "text": "farewell",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.41262003779411316
+    }
+  },
+  {
+    "text": "until next time",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.39441412687301636
+    }
+  },
+  {
+    "text": "take care",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.540459156036377
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.3172398507595062
+    }
+  },
+  {
+    "text": "definitely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.818609356880188
+    }
+  },
+  {
+    "text": "sure thing",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8815873861312866
+    }
+  },
+  {
+    "text": "I disagree",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4753137528896332
+    }
+  },
+  {
+    "text": "I beg to differ",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "stop_form",
+      "confidence": 0.34832271933555603
+    }
+  },
+  {
+    "text": "enough cooking for now",
+    "intent": "stop_form",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5868253707885742
+    }
+  },
+  {
+    "text": "cease",
+    "intent": "stop_form",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5378680229187012
+    }
+  },
+  {
+    "text": "halt",
+    "intent": "stop_form",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5829349160194397
+    }
+  },
+  {
+    "text": "I'm in the mood for cooking",
+    "intent": "ask_for_recipe",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.5218634009361267
+    }
+  },
+  {
+    "text": "looking for cooking inspiration",
+    "intent": "ask_for_recipe",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6094449758529663
+    }
+  },
+  {
+    "text": "include avocado in the recipe",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_for_recipe",
+      "confidence": 0.8396621942520142
+    }
+  },
+  {
+    "text": "add shrimp to the list",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6095386147499084
+    }
+  }
+]

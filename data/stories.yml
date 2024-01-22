@@ -1,6 +1,5 @@
 version: "3.1"
 
-# This file contains the stories which represent path of conversation for your assistant.
 stories:
 
 # story if user wants to interrupt form
@@ -11,6 +10,8 @@ stories:
   - intent: ask_for_recipe
   - action: recipe_form
   - active_loop: recipe_form
+  - slot_was_set:
+      - requested_slot: ingredient
   - intent: stop_form
   - action: utter_ask_continue
   - or:
@@ -19,13 +20,11 @@ stories:
   - action: action_deactivate_loop
   - active_loop: null
   - slot_was_set:
-    - requested_slot: null
+      - requested_slot: null
   - intent: goodbye
   - action: utter_goodbye
-    
-  
 
-
+# Story with interactive user input
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -34,27 +33,62 @@ stories:
   - action: recipe_form
   - active_loop: recipe_form
   - slot_was_set:
-    - requested_slot: ingredient
+      - requested_slot: ingredient
   - intent: inform
     entities:
     - ingredient: miso
   - slot_was_set:
-    - ingredient: miso
+      - ingredient: miso
   - action: recipe_form
   - slot_was_set:
-    - ingredient: miso
+      - ingredient: miso
   - slot_was_set:
-    - requested_slot: recipe_number
+      - requested_slot: recipe_number
   - intent: inform
     entities:
     - recipe_number: '5590'
   - slot_was_set:
-    - recipe_number: '5590'
+      - recipe_number: '5590'
   - action: recipe_form
   - slot_was_set:
-    - recipe_number: '5590'
+      - recipe_number: '5590'
   - slot_was_set:
-    - requested_slot: null
+      - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Another variation of the story
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_recipe
+  - action: recipe_form
+  - active_loop: recipe_form
+  - slot_was_set:
+      - requested_slot: ingredient
+  - intent: inform
+    entities:
+    - ingredient: pasta
+  - slot_was_set:
+      - ingredient: pasta
+  - action: recipe_form
+  - slot_was_set:
+      - ingredient: pasta
+  - slot_was_set:
+      - requested_slot: recipe_number
+  - intent: inform
+    entities:
+    - recipe_number: '6600'
+  - slot_was_set:
+      - recipe_number: '6600'
+  - action: recipe_form
+  - slot_was_set:
+      - recipe_number: '6600'
+  - slot_was_set:
+      - requested_slot: null
   - active_loop: null
   - action: utter_submit
   - intent: goodbye

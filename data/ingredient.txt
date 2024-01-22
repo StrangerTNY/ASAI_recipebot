@@ -1,4 +1,4 @@
-Red chili flakes
+ Red chili flakes
 Black peppercorns
 Coriander
 Fennel seeds
@@ -10,7 +10,7 @@ Bay leaves
 Cayenne pepper
 Thyme
 Cinnamon
-salt
+Salt
 Panko bread crumbs
 Pasta
 Couscous
@@ -37,7 +37,7 @@ Orange juice
 Ketchup
 Mayonnaise
 Extra virgin olive oil
-vegetable oil
+Vegetable oil
 Canola/olive oil
 Vinegar
 Mustard
@@ -83,3 +83,409 @@ Granulated sugar
 Chicken
 Beef 
 Tuna
+Salmon
+Shrimp
+Avocado
+Cheddar cheese
+Mozzarella cheese
+Blue cheese
+Gouda cheese
+Feta cheese
+Ricotta cheese
+Parmigiano-Reggiano
+Gruyere cheese
+Swiss cheese
+Provolone cheese
+Goat cheese
+Cream cheese
+Sour cream
+Greek yogurt
+Almonds
+Walnuts
+Pecans
+Cashews
+Pistachios
+Hazelnuts
+Sunflower seeds
+Pumpkin seeds
+Chia seeds
+Flax seeds
+Sesame seeds
+Quinoa
+Lentils
+Chickpeas
+Black beans
+Kidney beans
+Cannellini beans
+Green beans
+Spinach
+Kale
+Arugula
+Romaine lettuce
+Iceberg lettuce
+Mixed greens
+Cabbage
+Brussels sprouts
+Asparagus
+Broccoli
+Cauliflower
+Zucchini
+Bell peppers
+Jalapeno peppers
+Anaheim peppers
+Poblano peppers
+Eggplant
+Radishes
+Beets
+Carrot
+Butternut squash
+Sweet potato
+Pumpkin
+Cucumber
+Cherry tomatoes
+Grape tomatoes
+Plum tomatoes
+Beefsteak tomatoes
+Roma tomatoes
+Red onion
+White onion
+Yellow onion
+Scallions
+Leeks
+Shallots
+Red wine
+White wine
+Beer
+Rum
+Vodka
+Whiskey
+Tequila
+Brandy
+Champagne
+Vermouth
+Triple sec
+Grand Marnier
+Cointreau
+Campari
+Aperol
+Bourbon
+Gin
+Martini
+Margarita
+Mojito
+Old Fashioned
+Negroni
+Manhattan
+Moscow Mule
+Mojito
+Pina Colada
+Daiquiri
+Mai Tai
+Cosmopolitan
+Bloody Mary
+Mimosa
+Bellini
+Martini
+Mojito
+Pinot Noir
+Cabernet Sauvignon
+Merlot
+Shiraz
+Chardonnay
+Sauvignon Blanc
+Pinot Grigio
+Riesling
+Malbec
+Zinfandel
+Syrah
+Rose wine
+Prosecco
+Champagne
+Sparkling wine
+Sake
+Soju
+Shochu
+Baijiu
+Red Bull
+Orange juice
+Apple juice
+Pineapple juice
+Cranberry juice
+Coconut water
+Iced tea
+Lemonade
+Ginger beer
+Tonic water
+Club soda
+Cola
+Sprite
+Root beer
+Dr. Pepper
+Mountain Dew
+Pepsi
+Coca-Cola
+7 Up
+Ginger ale
+Coffee
+Espresso
+Americano
+Latte
+Cappuccino
+Macchiato
+Mocha
+Cold brew
+Tea
+Green tea
+Black tea
+Chamomile tea
+Earl Grey tea
+Matcha tea
+Oolong tea
+White tea
+Chai tea
+Herbal tea
+Bubble tea
+Red wine vinegar
+Balsamic vinegar
+Apple cider vinegar
+White vinegar
+Rice vinegar
+Malt vinegar
+Olive oil
+Avocado oil
+Walnut oil
+Sesame oil
+Truffle oil
+Peanut oil
+Coconut oil
+Ghee
+Clarified butter
+Sunflower oil
+Grapeseed oil
+Corn oil
+Canola oil
+Almond oil
+Flaxseed oil
+Hazelnut oil
+Pistachio oil
+Pomegranate molasses
+Agave nectar
+Maple syrup
+Honey
+Molasses
+Corn syrup
+Karo syrup
+Golden syrup
+Chocolate syrup
+Caramel sauce
+Butterscotch sauce
+Strawberry jam
+Raspberry jam
+Blackberry jam
+Apricot jam
+Orange marmalade
+Grape jelly
+Peanut butter
+Almond butter
+Cashew butter
+Sunflower butter
+Hazelnut spread
+Nutella
+Marshmallows
+Chocolate chips
+White chocolate
+Dark chocolate
+Milk chocolate
+Semi-sweet chocolate
+Bittersweet chocolate
+Cocoa powder
+Sprinkles
+Nuts
+Almonds
+Walnuts
+Pecans
+Cashews
+Pistachios
+Hazelnuts
+Sunflower seeds
+Pumpkin seeds
+Chia seeds
+Flax seeds
+Sesame seeds
+Poppy seeds
+Quinoa
+Lentils
+Chickpeas
+Black beans
+Kidney beans
+Cannellini beans
+Green beans
+Lima beans
+Edamame
+Black-eyed peas
+Soybeans
+Tofu
+Tempeh
+Seitan
+Jackfruit
+Mock duck
+Textured vegetable protein (TVP)
+Falafel
+Hummus
+Baba ganoush
+Tzatziki
+Pita bread
+Naan
+Tortillas
+Baguette
+Sourdough bread
+Rye bread
+Whole wheat bread
+Multigrain bread
+Gluten-free bread
+Ciabatta
+Focaccia
+English muffins
+Croissants
+Brioche
+Challah
+Pretzels
+Crackers
+Pita chips
+Bagels
+Rice cakes
+Popcorn
+Potato chips
+Tortilla chips
+Pretzels
+Cheetos
+Doritos
+Fritos
+Triscuits
+Ritz crackers
+Saltine crackers
+Wheat Thins
+Goldfish crackers
+Cheese puffs
+Pita chips
+Hummus
+Salsa
+Guacamole
+Spinach dip
+Artichoke dip
+Queso
+Tzatziki
+Baba ganoush
+Bruschetta
+Caprese salad
+Antipasto platter
+Stuffed mushrooms
+Deviled eggs
+Mozzarella sticks
+Chicken wings
+Sliders
+Spring rolls
+Dumplings
+Shrimp cocktail
+Nachos
+Charcuterie board
+Fruit skewers
+Vegetable platter
+Cheese board
+Fondue
+Potato skins
+Jalapeno poppers
+Onion rings
+Crab cakes
+Shrimp scampi
+Calamari
+Clams casino
+Escargot
+Oysters Rockefeller
+Lobster bisque
+French onion soup
+Tomato bisque
+Clam chowder
+Gazpacho
+Minestrone
+Chicken noodle soup
+Matzo ball soup
+Miso soup
+Ramen
+Pho
+Hot and sour soup
+Wonton soup
+Tom yum
+Caesar salad
+Greek salad
+Caprese salad
+Cobb salad
+Waldorf salad
+Nicoise salad
+Spinach salad
+Waldorf salad
+Panzanella
+Tabbouleh
+Quinoa salad
+Pasta salad
+Potato salad
+Coleslaw
+Broccoli salad
+Waldorf salad
+Chicken Caesar salad
+Chef salad
+Cobb salad
+Niçoise salad
+Waldorf salad
+Greek salad
+Caprese salad
+Caesar salad
+Salad nicoise
+Spinach salad
+Tuna salad
+Chicken salad
+Shrimp salad
+Egg salad
+Potato salad
+Macaroni salad
+Fruit salad
+Waldorf salad
+Caesar salad
+Greek salad
+Cobb salad
+Niçoise salad
+Caprese salad
+Panzanella
+Caesar salad
+Greek salad
+Cobb salad
+Niçoise salad
+Waldorf salad
+Caprese salad
+Quinoa salad
+Pasta salad
+Potato salad
+Coleslaw
+Broccoli salad
+Waldorf salad
+Caesar salad
+Greek salad
+Caprese salad
+Cobb salad
+Niçoise salad
+Waldorf salad
+Spinach salad
+Panzanella
+Tabbouleh
+Quinoa salad
+Pasta salad
+Potato salad
+Coleslaw
+Broccoli salad
+Caesar salad
+Greek salad
+Caprese salad
+Cobb salad
+Waldorf salad
+Spinach salad
+Panzanella
