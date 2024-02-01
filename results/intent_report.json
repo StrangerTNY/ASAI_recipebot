@@ -8,19 +8,22 @@
       "bot_challenge": 1
     }
   },
-  "thanks": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 18,
-    "confused_with": {}
-  },
   "bot_challenge": {
     "precision": 0.7894736842105263,
     "recall": 1.0,
     "f1-score": 0.8823529411764706,
     "support": 15,
     "confused_with": {}
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 0.8666666666666667,
+    "f1-score": 0.9285714285714286,
+    "support": 15,
+    "confused_with": {
+      "stop_form": 1,
+      "goodbye": 1
+    }
   },
   "stop_form": {
     "precision": 0.9285714285714286,
@@ -30,25 +33,6 @@
     "confused_with": {
       "greet": 1,
       "goodbye": 1
-    }
-  },
-  "ask_for_recipe": {
-    "precision": 0.9285714285714286,
-    "recall": 0.8666666666666667,
-    "f1-score": 0.896551724137931,
-    "support": 15,
-    "confused_with": {
-      "bot_challenge": 2
-    }
-  },
-  "affirm": {
-    "precision": 0.9375,
-    "recall": 0.8333333333333334,
-    "f1-score": 0.8823529411764706,
-    "support": 18,
-    "confused_with": {
-      "greet": 2,
-      "inform": 1
     }
   },
   "goodbye": {
@@ -61,6 +45,22 @@
       "greet": 1
     }
   },
+  "thanks": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
+    "confused_with": {}
+  },
+  "ask_for_recipe": {
+    "precision": 0.9285714285714286,
+    "recall": 0.8666666666666667,
+    "f1-score": 0.896551724137931,
+    "support": 15,
+    "confused_with": {
+      "bot_challenge": 2
+    }
+  },
   "inform": {
     "precision": 0.9375,
     "recall": 0.9375,
@@ -71,14 +71,14 @@
       "ask_for_recipe": 1
     }
   },
-  "deny": {
-    "precision": 1.0,
-    "recall": 0.8666666666666667,
-    "f1-score": 0.9285714285714286,
-    "support": 15,
+  "affirm": {
+    "precision": 0.9375,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8823529411764706,
+    "support": 18,
     "confused_with": {
-      "stop_form": 1,
-      "goodbye": 1
+      "greet": 2,
+      "inform": 1
     }
   },
   "accuracy": 0.9058823529411765,

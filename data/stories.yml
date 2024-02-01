@@ -93,3 +93,65 @@ stories:
   - action: utter_submit
   - intent: goodbye
   - action: utter_goodbye
+
+# User provides incomplete information and form gets interrupted
+- story: Incomplete_information_interrupts_form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_recipe
+  - action: recipe_form
+  - active_loop: recipe_form
+  - slot_was_set:
+      - requested_slot: ingredient
+  - intent: inform
+    entities:
+    - ingredient: tomato
+  - slot_was_set:
+      - ingredient: tomato
+  - intent: stop_form
+  - action: utter_ask_continue
+  - or:
+    - intent: stop_form
+    - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+# User provides an invalid recipe number
+- story: Invalid_recipe_number
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_recipe
+  - action: recipe_form
+  - active_loop: recipe_form
+  - slot_was_set:
+      - requested_slot: ingredient
+  - intent: inform
+    entities:
+    - ingredient: chicken
+  - slot_was_set:
+      - ingredient: chicken
+  - action: recipe_form
+  - slot_was_set:
+      - ingredient: chicken
+  - slot_was_set:
+      - requested_slot: recipe_number
+  - intent: inform
+    entities:
+    - recipe_number: 'invalid'
+  - action: utter_invalid_recipe_number
+  - active_loop: recipe_form
+  - slot_was_set:
+      - requested_slot: recipe_number
+  - intent: stop_form
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,16 +1,16 @@
 {
-  "ingredient": {
-    "precision": 0.8888888888888888,
-    "recall": 0.8888888888888888,
-    "f1-score": 0.8888888888888888,
-    "support": 27,
-    "confused_with": {}
-  },
   "recipe_number": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 6,
+    "confused_with": {}
+  },
+  "ingredient": {
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.8888888888888888,
+    "support": 27,
     "confused_with": {}
   },
   "micro avg": {

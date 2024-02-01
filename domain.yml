@@ -18,6 +18,7 @@ actions:
 - utter_iamabot
 - utter_ask_ingredient
 - utter_ask_recipe_number
+- utter_invalid_recipe_number
 entities:
 - recipe_number
 - ingredient
@@ -60,6 +61,8 @@ responses:
   - text: Which recipe do you want to use?
   utter_submit:
   - text: Have fun cooking!
+  utter_invalid_recipe_number:
+  - text: Sorry, I don't know this recipe. Please try again.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
